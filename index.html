@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Sreerag E G | Full Stack Software Engineer & Distributed Systems</title>
+    <meta name="title" content="Sreerag E G | Full Stack Software Engineer & Distributed Systems" />
+    <meta name="description" content="Full Stack Software Engineer specializing in Java, Python, ReactJS, AWS distributed microservices, and AI-assisted development pipelines. Platform engineer owning 233+ production automation modules." />
+    <meta name="keywords" content="Sreerag E G, Full Stack Engineer, Software Engineer, Python, Java, React, AWS ECS, Celery, SQS, FastAPI, Spring Boot, Distributed Systems, AI Engineering, Automation" />
+    <meta name="author" content="Sreerag E G" />
+    <meta name="theme-color" content="#0a0d14" id="theme-color-meta" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sreerageg.github.io/webpage/" />
+    <meta property="og:title" content="Sreerag E G | Full Stack Software Engineer & Distributed Systems" />
+    <meta property="og:description" content="Full Stack Software Engineer specializing in Java, Python, ReactJS, AWS distributed microservices, and AI-assisted development pipelines." />
+    <meta property="og:image" content="./favicon.svg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Sreerag E G | Full Stack Software Engineer & Distributed Systems" />
+    <meta property="twitter:description" content="Full Stack Software Engineer specializing in Java, Python, ReactJS, AWS distributed microservices, and AI-assisted development pipelines." />
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Immediate Theme Detection Script: Prevents FOUC (Flash of Unstyled Content) -->
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('portfolio_theme_mode');
+          var supportDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = 'dark';
+          if (mode === 'light') {
+            theme = 'light';
+          } else if (mode === 'dark') {
+            theme = 'dark';
+          } else {
+            theme = supportDark ? 'dark' : 'light';
+          }
+          document.documentElement.classList.remove('dark', 'light');
+          document.documentElement.classList.add(theme);
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>

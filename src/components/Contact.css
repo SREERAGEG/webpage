@@ -1,0 +1,195 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.contact-info-card,
+.composer-card {
+  padding: 2.75rem;
+  border-radius: var(--radius-xl);
+  background: var(--glass-frosted-bg);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid var(--glass-frosted-border);
+  box-shadow: var(--glass-frosted-shadow);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.contact-col-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.contact-col-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.channel-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 1.15rem 1.35rem;
+  border-radius: var(--radius-md);
+  background: var(--glass-subtle-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-subtle-border);
+  box-shadow: var(--glass-subtle-shadow);
+  margin-bottom: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.channel-box:hover {
+  border-color: var(--glass-border-hover);
+  background: var(--glass-crystal-bg);
+  transform: translateX(3px);
+  box-shadow: var(--glass-crystal-shadow);
+}
+
+.channel-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--glass-crystal-bg);
+  border: 1px solid var(--glass-crystal-border);
+  box-shadow: var(--glass-crystal-shadow);
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.channel-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.channel-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.channel-val {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+a.channel-val:hover {
+  color: var(--accent-primary);
+}
+
+.channel-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  background: var(--glass-crystal-bg);
+  border: 1px solid var(--glass-crystal-border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.channel-action-btn:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: scale(1.05);
+}
+
+/* Mailto Composer Form */
+.composer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--glass-crystal-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-crystal-border);
+  box-shadow: var(--glass-crystal-shadow);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.925rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 16px -2px var(--accent-glow), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.composer-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.composer-submit-btn {
+  flex: 1;
+}
+
+.copy-draft-btn {
+  padding: 10px 16px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

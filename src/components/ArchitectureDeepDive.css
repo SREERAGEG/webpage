@@ -1,0 +1,266 @@
+.architecture-blueprint-container {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  background: var(--glass-tinted-bg);
+  backdrop-filter: blur(32px) saturate(160%);
+  -webkit-backdrop-filter: blur(32px) saturate(160%);
+  border: 1px solid var(--glass-tinted-border);
+  box-shadow: var(--glass-tinted-shadow);
+  position: relative;
+}
+
+/* Blueprint Nav */
+.blueprint-stages-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1.15rem 1.75rem;
+  background: var(--glass-crystal-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  overflow-x: auto;
+}
+
+.stage-nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--glass-subtle-bg);
+  border: 1px solid var(--glass-subtle-border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.stage-nav-pill:hover {
+  color: var(--text-primary);
+  border-color: var(--glass-border-hover);
+  background: var(--glass-crystal-bg);
+}
+
+.stage-nav-pill.active {
+  background: var(--glass-crystal-bg);
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 16px -2px var(--accent-glow), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.stage-nav-num {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.stage-nav-name {
+  font-size: 0.8125rem;
+}
+
+.stage-active-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  box-shadow: 0 0 6px var(--accent-primary);
+}
+
+/* Blueprint Viewer */
+.blueprint-stage-viewer {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2.5rem;
+  padding: 2.75rem;
+  background: transparent;
+}
+
+/* Left Col */
+.viewer-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-meta-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 1.25rem;
+}
+
+.stage-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--glass-crystal-bg);
+  border: 1px solid var(--glass-crystal-border);
+  box-shadow: var(--glass-crystal-shadow);
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.stage-category-label {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-cyan);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.stage-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.stage-full-desc {
+  font-size: 1.025rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Rationale Box */
+.rationale-box {
+  padding: 1.35rem 1.6rem;
+  border-radius: var(--radius-md);
+  background: var(--glass-subtle-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-subtle-border);
+  box-shadow: var(--glass-subtle-shadow);
+  margin-bottom: 2rem;
+}
+
+.rationale-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.rationale-text {
+  font-size: 0.8875rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* Specs Row */
+.stage-specs-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.spec-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--glass-crystal-bg);
+  border: 1px solid var(--glass-crystal-border);
+  box-shadow: var(--glass-crystal-shadow);
+}
+
+.spec-cell-label {
+  font-family: var(--font-mono);
+  font-size: 0.675rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.spec-cell-val {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+/* Right Col: Code Snippet Window */
+.arch-code-window {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--code-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.window-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background: var(--glass-crystal-bg);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.window-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+html.light .window-dot {
+  background: rgba(15, 23, 42, 0.15);
+}
+
+.window-filename {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.window-lang {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.code-pre-block {
+  padding: 1.5rem;
+  margin: 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  background: transparent;
+}
+
+.code-pre-block code {
+  font-family: inherit;
+}
+
+@media (max-width: 990px) {
+  .blueprint-stage-viewer {
+    grid-template-columns: 1fr;
+  }
+}

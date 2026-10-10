@@ -1,0 +1,43 @@
+.portfolio-app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+#main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dynamic Interactive Optical Reflection Spotlight */
+.bg-cursor-spotlight {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    650px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(99, 102, 241, 0.045),
+    transparent 50%
+  );
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+html.light .bg-cursor-spotlight {
+  background: radial-gradient(
+    650px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(99, 102, 241, 0.035),
+    transparent 50%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-cursor-spotlight {
+    display: none;
+  }
+}

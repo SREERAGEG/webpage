@@ -1,0 +1,549 @@
+.hero-section {
+  padding-top: 6.25rem;
+  padding-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Executive Split Viewport */
+.hero-split-viewport {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 2.75rem;
+  align-items: center;
+  margin-bottom: 2.75rem;
+}
+
+.hero-narrative-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-console-col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Eyebrow Status Pill */
+.hero-top-eyebrow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 13px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  background: var(--glass-crystal-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-crystal-border);
+  box-shadow: var(--glass-crystal-shadow);
+}
+
+.status-text {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.status-divider {
+  color: var(--text-faint);
+}
+
+.status-location {
+  color: var(--text-muted);
+}
+
+.discipline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Headline */
+.hero-title {
+  font-size: clamp(2.15rem, 3.6vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  max-width: 25ch;
+}
+
+/* Description */
+.hero-description {
+  font-size: 1.025rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 58ch;
+  margin-bottom: 1.4rem;
+}
+
+.hero-description strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Actions Row */
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 1.4rem;
+}
+
+.hero-main-cta {
+  padding: 11px 24px;
+  font-size: 0.925rem;
+}
+
+.hero-secondary-cta {
+  padding: 11px 20px;
+  font-size: 0.925rem;
+}
+
+.resume-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--glass-subtle-bg);
+  border: 1px solid var(--glass-subtle-border);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.resume-pill-btn:hover {
+  color: var(--text-primary);
+  background: var(--glass-crystal-bg);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--glass-crystal-shadow);
+}
+
+/* Verified Channels Strip */
+.hero-channels-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding-top: 0.25rem;
+}
+
+.channels-label {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.hero-channel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.hero-channel-link:hover {
+  color: var(--accent-primary);
+}
+
+.link-arrow {
+  color: var(--text-muted);
+  transition: transform var(--transition-fast);
+}
+
+.hero-channel-link:hover .link-arrow {
+  transform: translate(2px, -2px);
+  color: var(--accent-primary);
+}
+
+/* =========================================================================
+   Executive Telemetry Console (Hero Showcase)
+   Enhanced with physical frosted glass & diffused illumination
+   ========================================================================= */
+.console-wrapper-relative {
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+/* Diffused Luminous Aura behind Console */
+.console-backlight-aura {
+  position: absolute;
+  inset: -20px;
+  border-radius: var(--radius-2xl);
+  background: radial-gradient(ellipse at 50% 30%, rgba(99, 102, 241, 0.15) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 80%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+html.light .console-backlight-aura {
+  background: radial-gradient(ellipse at 50% 30%, rgba(79, 70, 229, 0.08) 0%, rgba(2, 132, 199, 0.05) 50%, transparent 80%);
+}
+
+.hero-telemetry-console {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--glass-frosted-bg);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid var(--glass-frosted-border);
+  box-shadow: var(--glass-frosted-shadow);
+}
+
+.console-header-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 1.6rem;
+  border-bottom: 1px solid var(--glass-border);
+  background: var(--glass-crystal-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.console-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.console-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  display: block;
+}
+
+.console-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.pulse-icon {
+  animation: pulse-opac 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-opac {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.console-tab-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--glass-subtle-bg);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-subtle-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow-x: auto;
+}
+
+.console-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  flex: 1;
+  justify-content: center;
+}
+
+.console-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.console-tab-btn.active {
+  background: var(--glass-crystal-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--accent-primary);
+  border: 1px solid var(--glass-crystal-border);
+  box-shadow: var(--glass-crystal-shadow);
+}
+
+html.dark .console-tab-btn.active {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Console Stage Body */
+.console-stage-body {
+  padding: 1.15rem 1.35rem;
+  background: rgba(6, 9, 16, 0.4);
+}
+
+html.light .console-stage-body {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.pipeline-flow-diagram {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.flow-connector {
+  display: none;
+}
+
+.flow-step-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--glass-crystal-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-crystal-border);
+  box-shadow: var(--glass-crystal-shadow);
+  transition: all var(--transition-fast);
+}
+
+.flow-step-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 8px 24px -4px var(--accent-glow);
+}
+
+.flow-step-box.active-node {
+  border-color: var(--accent-primary);
+  background: var(--glass-surface-hover);
+}
+
+.step-num {
+  font-family: var(--font-mono);
+  font-size: 0.675rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-bottom: 3px;
+}
+
+.step-name,
+.step-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.step-sub,
+.step-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+/* Console Specs Footer Grid */
+.pipeline-specs-summary,
+.console-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--divider-color);
+}
+
+.spec-item,
+.spec-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--glass-crystal-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-crystal-border);
+  box-shadow: var(--glass-crystal-shadow);
+  transition: all var(--transition-fast);
+}
+
+.spec-item:hover,
+.spec-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+}
+
+.spec-label,
+.spec-box-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.spec-value,
+.spec-box-value {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.spec-desc,
+.spec-box-detail {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+/* =========================================================================
+   Unified Telemetry Strip
+   Frosted glass container with crisp numbers & hairline dividers
+   ========================================================================= */
+.telemetry-strip-wrapper {
+  margin-bottom: 4.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--glass-frosted-bg);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid var(--glass-frosted-border);
+  box-shadow: var(--glass-frosted-shadow);
+  padding: 1.5rem 2rem;
+}
+
+.telemetry-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+}
+
+.telemetry-metric-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.telemetry-metric-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -0.75rem;
+  width: 1px;
+  background: var(--divider-color);
+}
+
+.metric-number-display {
+  font-family: var(--font-sans);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.metric-suffix {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.metric-label-display {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.metric-context-display {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1080px) {
+  .hero-split-viewport {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .pipeline-flow-diagram {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .telemetry-metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+  }
+  .telemetry-metric-item:nth-child(3)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .pipeline-specs-summary {
+    grid-template-columns: 1fr;
+  }
+  .telemetry-metrics-grid {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+  .telemetry-metric-item::after {
+    display: none !important;
+  }
+  .console-tab-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+  .console-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
