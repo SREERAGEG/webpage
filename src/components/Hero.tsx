@@ -53,7 +53,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
             {/* Lead Narrative */}
             <p className="hero-description">
-              Full Stack Software Engineer and primary author (roughly 73% of commits) of the production platform orchestrating <strong>233 automation modules across 40+ US payer portals</strong> on AWS ECS & SQS under strict HIPAA controls. Architect of custom LLM agent pipelines delivering compliant, high-velocity engineering.
+              Backend Software Engineer and primary author (roughly 73% of commits) of the production platform orchestrating <strong>233 automation modules across 40+ US payer portals</strong> on AWS ECS & SQS under strict HIPAA controls. Architect of custom LLM agent pipelines delivering compliant, high-velocity engineering.
             </p>
 
             {/* Action Controls */}

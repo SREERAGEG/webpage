@@ -184,7 +184,7 @@ export const Contact: React.FC = () => {
                     name="subject"
                     type="text"
                     required
-                    placeholder="e.g. Opportunity: Full Stack / Backend Engineer"
+                    placeholder="e.g. Opportunity: Backend / Distributed Systems Engineer"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     className="form-input"

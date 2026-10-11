@@ -21,7 +21,7 @@ export const SystemsAndProjects: React.FC = () => {
     { id: 'all', label: 'All Systems', count: portfolioData.featuredSystems.length },
     { id: 'distributed', label: 'Distributed & Cloud', count: portfolioData.featuredSystems.filter(s => s.category === 'distributed').length },
     { id: 'ai-engineering', label: 'AI & LLM Tooling', count: portfolioData.featuredSystems.filter(s => s.category === 'ai-engineering').length },
-    { id: 'fullstack', label: 'Full Stack & APIs', count: portfolioData.featuredSystems.filter(s => s.category === 'fullstack').length },
+    { id: 'fullstack', label: 'Backend & APIs', count: portfolioData.featuredSystems.filter(s => s.category === 'fullstack').length },
     { id: 'automation', label: 'Automation & Security', count: portfolioData.featuredSystems.filter(s => s.category === 'automation').length }
   ]
 

@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           </div>
           <div className="brand-info">
             <span className="brand-name">{portfolioData.personal.preferredName} E G</span>
-            <span className="brand-role">Full Stack Engineer</span>
+            <span className="brand-role">{portfolioData.personal.title}</span>
           </div>
         </a>
 

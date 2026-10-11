@@ -75,8 +75,8 @@ export const portfolioData = {
   personal: {
     name: "SREERAG E G",
     preferredName: "Sreerag",
-    title: "Full Stack Software Engineer",
-    headline: "Full Stack Software Engineer | Distributed Systems & AI-Assisted Architecture",
+    title: "Backend Engineer",
+    headline: "Backend Software Engineer | Distributed Systems & AI-Assisted Architecture",
     location: "Kerala, India",
     email: "sreerageg@gmail.com",
     phone: "+91 9567870963",
@@ -85,9 +85,9 @@ export const portfolioData = {
     linkedin: "sreerag-e-g",
     linkedinUrl: "https://linkedin.com/in/sreerag-e-g",
     resumeUrl: "./resume.pdf",
-    openToRoles: ["Full Stack Engineer", "Backend Software Engineer", "Platform / Distributed Systems Engineer"],
-    bioSummary: "Full stack engineer owning systems end-to-end: high-throughput backend services, event-driven distributed workloads on AWS, and front-end integration. Primary author of the production healthcare automation platform handling 233 modules across 40+ payer portals under strict HIPAA compliance.",
-    fullSummary: "Full stack software engineer who owns systems end to end — backend services and REST APIs, front-end integration, and event-driven distributed workloads on AWS. Primary author (roughly 73% of commits) and technical owner of the production platform running US healthcare copay-assistance, claim submission and revenue-cycle workflows: 233 modules across 40+ payer and manufacturer portals, orchestrated over queue-driven Celery/SQS pipelines into containerized AWS ECS worker pools, under HIPAA and PHI controls. Drives AI-assisted development across the SDLC — built the in-house LLM agent pipeline that generates, reviews and standardizes production code, with every AI-generated output gated by peer review, automated testing and secure-coding standards. Sets framework conventions other engineers build against, leads design-level discussions, and works directly with business stakeholders in a regulated, compliance-heavy domain."
+    openToRoles: ["Backend Software Engineer", "Platform / Distributed Systems Engineer", "Full Stack Engineer"],
+    bioSummary: "Backend software engineer owning resilient systems end-to-end: high-throughput backend services, event-driven distributed workloads on AWS, and data pipelines. Primary author of the production healthcare automation platform handling 233 modules across 40+ payer portals under strict HIPAA compliance.",
+    fullSummary: "Backend software engineer who owns systems end to end — high-throughput backend services and REST APIs, event-driven distributed workloads on AWS, and production automation. Primary author (roughly 73% of commits) and technical owner of the production platform running US healthcare copay-assistance, claim submission and revenue-cycle workflows: 233 modules across 40+ payer and manufacturer portals, orchestrated over queue-driven Celery/SQS pipelines into containerized AWS ECS worker pools, under HIPAA and PHI controls. Drives AI-assisted development across the SDLC — built the in-house LLM agent pipeline that generates, reviews and standardizes production code, with every AI-generated output gated by peer review, automated testing and secure-coding standards. Sets framework conventions other engineers build against, leads design-level discussions, and works directly with business stakeholders in a regulated, compliance-heavy domain."
   } as PersonalInfo,
 
   verifiedMetrics: [
